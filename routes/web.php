@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\accueilcontroller;
+use App\Http\Controllers\produitscontroller; // Page produitS   
+use App\Http\Controllers\produitcontroller; // Page produit
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/produits', function () {
-    return view('produits');
-});
-Route::get('/produit', function () {
-    return view('produit');
-});
+Route::get('/', [accueilcontroller::class, 'Index']);
+Route::get('/produits', [produitscontroller::class, 'Index']);
+Route::get('/produit', [produitcontroller::class, 'Index']);

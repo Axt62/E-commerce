@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">Produits</h1>
@@ -14,7 +16,7 @@
         <div class="col">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                    <li class="breadcrumb-item"><a href="/">Accueil</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Produits</li>
                 </ol>
             </nav>
@@ -63,19 +65,17 @@
                     <li class="list-group-item"><a href="category.html">Vestibulum at eros</a></li>
                 </ul>
             </div>
-
-            @foreach ($produits as $produit)
                 
             <div class="card bg-light mb-3">
                 <div class="card-header bg-success text-white text-uppercase">Dernier produit</div>
                 <div class="card-body">
                     <img class="img-fluid" src="https://dummyimage.com/600x400/55595c/fff" />
-                    <h5 class="card-title mt-3">$name</h5>
-                    <p class="card-text">$description</p>
+                    <h5 class="card-title mt-3">toto</h5>
+                    <p class="card-text">toto</p>
 
                     <div class="row">
                         <div class="col">
-                            <p class="btn btn-danger w-100">$prix &euro;</p>
+                            <p class="btn btn-danger w-100">99 &euro;</p>
                         </div>
                         <div class="col">
                             <a href="/produit" class="btn btn-success w-100">Voir</a>
@@ -84,8 +84,35 @@
                 </div>
             </div>
         </div>
-            @endforeach
-                <div class="col-12">
+
+    <div class="col">
+        <div class="row">
+        @foreach ($produits as $produit)
+            
+               <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="/produit/{{ $produit->id }}" title=>{{ $produit->nom }}</a></h4>
+                            <p class="card-text">{{ $produit->description }}</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger w-100">{{ $produit->prix }} &euro;</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-success w-100">Ajouter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        
+
+        @endforeach
+    </div>
+        </div>
+            <div class="col-12">
                     <nav aria-label="...">
                         <ul class="pagination">
                             <li class="page-item disabled">
@@ -104,7 +131,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 @endsection

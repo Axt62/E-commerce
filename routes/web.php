@@ -17,7 +17,7 @@ use App\Http\Controllers\produitcontroller; // Page produit
 |
 */
 
-Route::get('/', [accueilcontroller::class, 'Index']);
+Route::get('/', [accueilcontroller::class, 'Index' ]);
 Route::get('/produits', [produitscontroller::class, 'Index']);
 Route::get('/produit', [produitcontroller::class, 'Index']);
 Route::get('/contact', [contactcontroller::class, 'Index']);

@@ -512,6 +512,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex {
   display: flex;
 }
+.table {
+  display: table;
+}
 .h-12 {
   height: 3rem;
 }

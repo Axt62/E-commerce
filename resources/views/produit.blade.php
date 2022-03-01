@@ -3,7 +3,7 @@
 @section('content')
 
 
-@foreach ($produits as $produit)
+
     
    
 <section class="jumbotron text-center">
@@ -12,7 +12,7 @@
         <p class="lead text-muted mb-0">{{ $produit->description }}</p>
     </div>
 </section>
-@endforeach 
+
 <div class="container">
     <div class="row">
         <div class="col">

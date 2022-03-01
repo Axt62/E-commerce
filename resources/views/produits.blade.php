@@ -100,7 +100,7 @@
                                     <p class="btn btn-danger w-100">{{ $produit->prix }} &euro;</p>
                                 </div>
                                 <div class="col">
-                                    <a href="/produit" class="btn btn-success w-100">Ajouter</a>
+                                    <a href="/produit/{{ $produit->id }}" class="btn btn-success w-100">Ajouter</a>
                                 </div>
                             </div>
                         </div>

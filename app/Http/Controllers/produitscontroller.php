@@ -16,12 +16,11 @@ class produitscontroller extends Controller
         ]);
     }
 
-    public function show()
-        {
-            return view('/produit', [
-                'produits' => produits::all()->sortBy('nom'),
-            ]);
-        }  
-
-    }    
-
+       
+    public function show(Produits $produits)
+    {
+        return view('produit', [
+            'produit' => $produits,
+        ]);
+    }
+}

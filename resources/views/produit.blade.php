@@ -2,13 +2,17 @@
 
 @section('content')
 
+
+@foreach ($produits as $produit)
+    
+   
 <section class="jumbotron text-center">
     <div class="container">
-        <h1 class="jumbotron-heading">Produit</h1>
-        <p class="lead text-muted mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro commodi aliquam veniam fuga suscipit itaque labore natus accusamus numquam, perferendis in? Incidunt libero dignissimos unde fuga voluptatem omnis accusamus delectus.</p>
+        <h1 class="jumbotron-heading">{{ $produit->nom }}</h1>
+        <p class="lead text-muted mb-0">{{ $produit->description }}</p>
     </div>
 </section>
-
+@endforeach 
 <div class="container">
     <div class="row">
         <div class="col">

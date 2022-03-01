@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\accueilcontroller;
 use App\Http\Controllers\contactcontroller;
 use App\Http\Controllers\produitscontroller; // Page produitS   
-use App\Http\Controllers\produitcontroller; // Page produit
+use App\Http\Controllers\paniercontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +21,4 @@ Route::get('/', [accueilcontroller::class, 'Index' ]);
 Route::get('/produits', [produitscontroller::class, 'Index']);
 Route::get('/produit/{produits}', [produitscontroller::class, 'show']);
 Route::get('/contact', [contactcontroller::class, 'Index']);
-Route::get('/panier', [paniercontroller::class, 'show']);
+Route::get('/panier', [paniercontroller::class, 'Index']);

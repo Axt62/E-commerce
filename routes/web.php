@@ -21,3 +21,4 @@ Route::get('/', [accueilcontroller::class, 'Index' ]);
 Route::get('/produits', [produitscontroller::class, 'Index']);
 Route::get('/produit/{produits}', [produitscontroller::class, 'show']);
 Route::get('/contact', [contactcontroller::class, 'Index']);
+Route::get('/panier', [paniercontroller::class, 'show']);

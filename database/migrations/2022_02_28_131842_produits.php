@@ -26,7 +26,7 @@ return new class extends Migration
             $table->decimal('promotion');
     });
 }
-
+    
     /**
      * Reverse the migrations.
      *
